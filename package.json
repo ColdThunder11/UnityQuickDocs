@@ -1,0 +1,80 @@
+{
+	"name": "unity-quick-docs",
+	"displayName": "UnityQuickDocs",
+	"description": "A extension to help you quick look up uinty API's Documents.",
+	"keywords": [
+		"Unity"
+	],
+	"version": "0.0.1",
+	"publisher": "ColdThunder11",
+	"engines": {
+		"vscode": "^1.36.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:csharp"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "UnityQuickDocs",
+			"properties": {
+				"unityQuickDocs.version": {
+					"type": "string",
+					"default": null,
+					"description": "The version of documents to be opened. Such as 2019.2."
+				},
+				"unityQuickDocs.source.useCustomSource": {
+					"type": "boolean",
+					"default": false,
+					"description": "Check to use unofficial documents source."
+				},
+				"vscodePluginDemo.source.customSourcePath": {
+					"type": "string",
+					"default": null,
+					"description": "The custom documents to be opened. It can be an web or local path."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "unityQuickDocs.turn2Docs",
+				"title": "Turn to Unity Documents"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "unityQuickDocs.turn2Docs",
+				"key": "ctrl+shift+r",
+				"mac": "cmd+r",
+				"when": "editorFocus && resourceLangId == csharp"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorFocus && resourceLangId == csharp",
+					"command": "unityQuickDocs.turn2Docs",
+					"group": "z_commands"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.36.0",
+		"eslint": "^5.13.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"typescript": "^3.3.1",
+		"vscode-test": "^1.0.0-next.0"
+	},
+	"license": "license.txt"
+}
