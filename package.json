@@ -1,7 +1,7 @@
 {
 	"name": "unity-quick-docs",
 	"displayName": "UnityQuickDocs",
-	"description": "A extension to help you quick look up uinty API's Documents.",
+	"description": "A extension to help you quick search uinty API's Documents.",
 	"keywords": [
 		"Unity"
 	],
@@ -23,32 +23,21 @@
 			"properties": {
 				"unityQuickDocs.version": {
 					"type": "string",
-					"default": null,
-					"description": "The version of documents to be opened. Such as 2019.2."
-				},
-				"unityQuickDocs.source.useCustomSource": {
-					"type": "boolean",
-					"default": false,
-					"description": "Check to use unofficial documents source."
-				},
-				"vscodePluginDemo.source.customSourcePath": {
-					"type": "string",
-					"default": null,
-					"description": "The custom documents to be opened. It can be an web or local path."
+					"default": "2019.1",
+					"description": "The unity version of documents to be opened. Such as 2019.2."
 				}
 			}
 		},
 		"commands": [
 			{
 				"command": "unityQuickDocs.turn2Docs",
-				"title": "Turn to Unity Documents"
+				"title": "Search in Unity Documents"
 			}
 		],
 		"keybindings": [
 			{
 				"command": "unityQuickDocs.turn2Docs",
 				"key": "ctrl+shift+r",
-				"mac": "cmd+r",
 				"when": "editorFocus && resourceLangId == csharp"
 			}
 		],
