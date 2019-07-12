@@ -3,9 +3,9 @@
 	"displayName": "UnityQuickDocs",
 	"description": "A extension to help you quick search uinty API's Documents.",
 	"keywords": [
-		"Unity"
+		"Unity","Document"
 	],
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"publisher": "ColdThunder11",
 	"engines": {
 		"vscode": "^1.36.0"

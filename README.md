@@ -1,2 +1,4 @@
-# UnityQuickDocs
-A VSCode extension to help you quick look up uinty API's Documents.
+# unityquickdocs README
+##A extension to help you quick search uinty API's Documents.
+### 1.0.0
+Initial release.
