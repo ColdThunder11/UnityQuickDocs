@@ -22,7 +22,7 @@ function activate(context) {
 		var selectedStr = vscode.window.activeTextEditor.document.getText(new vscode.Range(vscode.window.activeTextEditor.selection.start, vscode.window.activeTextEditor.selection.end));
 		var version = vscode.workspace.getConfiguration().get("unityQuickDocs.version");
 		if (selectedStr != "") {
-			var shellStr = "explorer \"https://docs.unity3d.com/"+version + "/Documentation/ScriptReference/30_search.html?q="+selectedStr+"\"";
+			var shellStr = "start https://docs.unity3d.com/"+version + "/Documentation/ScriptReference/30_search.html?q="+selectedStr+";
 			exec(shellStr, function () { });
 		}
 
