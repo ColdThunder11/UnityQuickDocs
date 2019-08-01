@@ -5,7 +5,7 @@
 	"keywords": [
 		"Unity","Document"
 	],
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"publisher": "ColdThunder11",
 	"engines": {
 		"vscode": "^1.36.0"
@@ -24,7 +24,7 @@
 			"properties": {
 				"unityQuickDocs.version": {
 					"type": "string",
-					"default": "2019.1",
+					"default": "2019.2",
 					"description": "The unity version of documents to be opened. Such as 2019.2."
 				}
 			}
@@ -39,13 +39,13 @@
 			{
 				"command": "unityQuickDocs.turn2Docs",
 				"key": "ctrl+shift+r",
-				"when": "editorFocus && resourceLangId == csharp"
+				"when": "editorFocus && resourceLangId == csharp && editorHasSelection && isWindows"
 			}
 		],
 		"menus": {
 			"editor/context": [
 				{
-					"when": "editorFocus && resourceLangId == csharp",
+					"when": "editorFocus && resourceLangId == csharp && editorHasSelection && isWindows",
 					"command": "unityQuickDocs.turn2Docs",
 					"group": "z_commands"
 				}
